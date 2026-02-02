@@ -21,12 +21,13 @@ then
 echo "${BASHCONFIG_FILE} not found."
 exit 1
 else
-    echo "Copying ${BASHCONFIG_FILE} to ${HOME}"
+    echo "Copying ${BASHCONFIG_FILE} to ${HOME}/"
     cp "${BASHCONFIG_FILE}" "${HOME}/"
+    cp -r "${BASHCONFIGS_DIR}" "${HOME}/"
 fi
 
 #Check to see if bashconfig source command already present
-grep ${SOURCE_CMD} ${BASHRC_FILE} > /dev/null 2>&1
+grep "${SOURCE_CMD}" ${BASHRC_FILE} > /dev/null 2>&1
 if [[ $? -eq 0 ]]
 then
     echo "Bashconfig source command already present in ${BASHRC_FILE}"
