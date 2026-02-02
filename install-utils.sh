@@ -31,5 +31,5 @@ then
     exit 0
 fi
 #Append utils to bashrc
-cat ${SOURCE_CMD} >> ${BASHRC_FILE}
+echo ${SOURCE_CMD} >> ${BASHRC_FILE}
 echo "Utils source command appended to ${BASHRC_FILE}. Run 'source ~/.bashrc' to load them into your current shell."
