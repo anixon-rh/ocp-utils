@@ -1,0 +1,3 @@
+for f in ${HOME}/.bashconfigs/*.sh; do
+    source "$f"
+done
